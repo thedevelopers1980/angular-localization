@@ -5,8 +5,8 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-privacy',
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss'],
-  standalone: true,
-  imports: [TranslateModule],
+  // standalone: true,
+  // imports: [TranslateModule],
 })
 export default class PrivacyComponent {
 
