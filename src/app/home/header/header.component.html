@@ -1,0 +1,43 @@
+<div id="banner">
+  <img src="../../../assets/Hero Final.jpeg" alt="Banner Image" />
+</div>
+
+<header [class.scrolled]="isScrolled">
+  <nav>
+    <div class="logo">
+      <a [routerLink]="'/home' | localize">LOGISTICS COMPANY</a>
+    </div>
+
+    <ul class="nav-items">
+      <li>
+        <a [routerLink]="'/home' | localize">Home</a>
+      </li>
+      <li>
+        <a [routerLink]="'/privacy' | localize">Services</a>
+      </li>
+      <li>
+        <a [routerLink]="'/privacy' | localize">Partners</a>
+      </li>
+      <li>
+        <a [routerLink]="'/privacy' | localize">Privacy</a>
+      </li>
+      <li>
+        <a [routerLink]="'/privacy' | localize">Contact Us</a>
+      </li>
+      <li>
+        <a *ngIf="currentActiveUrl=='/en'"
+          routerLink="/ar/{{currentUrl}}">
+          {{currentActiveUrl=='/en'?'Arabic':'English'}}
+        </a>
+      </li>
+      <li>
+        <a *ngIf="currentActiveUrl=='/ar'"
+          routerLink="/en/{{currentUrl}}">
+          {{currentActiveUrl=='/ar'?'English':'Arabic'}}
+        </a>
+      </li>
+      <!-- Other links... -->
+    </ul>
+  </nav>
+  <hr class="nav-line" />
+</header>
